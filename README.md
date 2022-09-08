@@ -1,2 +1,3 @@
 # crackpots
-Recreation of the game crackpots
+Recreation of the game crackpots.
+For learning purposes.
