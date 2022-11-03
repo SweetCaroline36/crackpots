@@ -1,19 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class Move : MonoBehaviour
+public class Score : MonoBehaviour
 {
-    public float speed;
+    public static int score = 0;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.up * speed * Time.deltaTime;
+        GetComponent<TextMeshProUGUI>().text = score.ToString();
     }
 }

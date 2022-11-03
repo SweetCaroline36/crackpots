@@ -6,11 +6,15 @@ TagManager:
   tags:
   - Window
   - Pot
+  - Lane
+  - Wall
+  - Enemy
+  - PotReset
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Pots
   - Water
   - UI
   - 

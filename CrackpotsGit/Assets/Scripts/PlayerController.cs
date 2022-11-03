@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private float speed;
     private GameObject[] pots = new GameObject[6];
     private Collider2D[] colliders = new Collider2D[6];
@@ -32,12 +31,14 @@ public class PlayerController : MonoBehaviour
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
-
         if(Input.GetKeyDown("space"))
         {
-            if (playerCollider.IsTouching(colliders[2]))
+            for (int i = 0; i < pots.Length; i++)
             {
-                pots[2].falling = true;
+                if (playerCollider.IsTouching(colliders[i]))
+                {
+                    pots[i].GetComponent<Falling>().startFalling();
+                }
             }
         }
     }
